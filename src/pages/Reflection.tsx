@@ -71,7 +71,7 @@ const Reflection = () => {
     }
   };
   const summarize = async (text: string) => {
-    const apiKey = "AIzaSyASrxa8e8HMF1KAlFqdRTmef0a-QyGZQ5w"; // put your key here
+    const apiKey = import.meta.env.VITE_API_KEY; // put your key here
 
     const res = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
