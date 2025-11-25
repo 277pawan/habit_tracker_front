@@ -1,6 +1,7 @@
 // API Client (function-based)
 
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL =
+  "https://habit-tracker-front-8rp6-r9kkvupr3-bpawan277gmailcoms-projects.vercel.app/api";
 
 // token helpers
 const getToken = () =>
