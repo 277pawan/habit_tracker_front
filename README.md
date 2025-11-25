@@ -1,22 +1,20 @@
-# Welcome to your Lovable project
+# Welcome to Habit_tracker project
 
 ## Project info
-
-**URL**: https://lovable.dev/projects/041a9c53-c420-4a7a-9525-693f51859787
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
+**Use Habit_tracker**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/041a9c53-c420-4a7a-9525-693f51859787) and start prompting.
+Simply visit the [Habit_tracker Project](https://lovable.dev/projects/041a9c53-c420-4a7a-9525-693f51859787) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
+Changes made via Habit_tracker will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Habit_tracker.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -60,14 +58,109 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## 🚀 Features
 
-Simply open [Lovable](https://lovable.dev/projects/041a9c53-c420-4a7a-9525-693f51859787) and click on Share -> Publish.
+### ✅ 1. User Authentication
 
-## Can I connect a custom domain to my Lovable project?
+- Register, Login, Logout
+- JWT token stored in localStorage
+- Protected routes
+- Auto-login across sessions
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### 🎭 2. Identity Selection
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Users choose a **Primary Identity** (e.g., Learner, Athlete).  
+This identity personalizes:
+
+- Habit categories
+- Boost system
+- Weekly reflections
+- AI summary context
+
+---
+
+### 📝 3. Habit Management
+
+- Create/Edit/Delete habits
+- Set difficulty (easy/medium/hard)
+- Add reminder time
+- Weekly schedule (Sun → Sat)
+- Track streaks
+- Mark complete/uncomplete daily
+
+Each habit includes:
+
+### 🔔 4. Email Reminder Notifications
+
+If a habit has a reminder time and today is a scheduled day:  
+✔ User receives an **email notification** at that exact time.
+
+Handled automatically using backend cron + your scheduled settings.
+
+---
+
+### 🎯 5. Habit Completion Tracking
+
+- Track completed habits per day
+- Calculate streak
+- See progress in reports
+
+---
+
+### 🔥 6. Boost System
+
+Users can:
+
+- Send motivational **boosts**
+- Receive boosts
+- Improve engagement and consistency
+
+---
+
+### 📊 7. Reports & Analytics
+
+- Weekly performance
+- Completed habits count
+- Missed habits count
+- Active streaks
+
+---
+
+### 📓 8. Reflection Journal
+
+Users can write:
+
+- Daily reflections
+- Weekly thoughts
+- Mood check-ins
+
+All reflections are tied to user identity.
+
+---
+
+### 🤖 9. AI-Powered Weekly Summary
+
+The app includes a **free AI summarization feature**:
+
+Users write a weekly reflection →  
+AI summarizes it into:
+
+- Main highlights
+- Areas of improvement
+- Identity-based analysis
+- Suggestions for next week
+
+This uses a **free external AI summarization API** from frontend.
+
+---
+
+### 💻 10. Clean Modern UI
+
+- Built with React + TypeScript
+- Modular API client
+- Clean reusable components
+- Full responsive design
+
+---
