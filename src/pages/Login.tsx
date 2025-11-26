@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/card";
 import { toast } from "sonner";
 import { api } from "@/lib/api";
-import { Book, BookOpenCheck, Sparkles } from "lucide-react";
+import { BookOpenCheck } from "lucide-react";
 
 const Login = () => {
   const navigate = useNavigate();
