@@ -1,19 +1,25 @@
-import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { toast } from 'sonner';
-import { api } from '@/lib/api';
-import { Sparkles } from 'lucide-react';
+import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { toast } from "sonner";
+import { api } from "@/lib/api";
+import { Book, BookOpenCheck, Sparkles } from "lucide-react";
 
 const Login = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -22,10 +28,10 @@ const Login = () => {
 
     try {
       await api.login(formData);
-      toast.success('Welcome back! 🎉');
-      navigate('/dashboard');
+      toast.success("Welcome back! 🎉");
+      navigate("/dashboard");
     } catch (error: any) {
-      toast.error(error.message || 'Login failed');
+      toast.error(error.message || "Login failed");
     } finally {
       setLoading(false);
     }
@@ -36,7 +42,7 @@ const Login = () => {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 mb-4">
-            <Sparkles className="w-10 h-10 text-primary" />
+            <BookOpenCheck className="w-10 h-10 text-primary" />
             <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Habit Identity
             </h1>
@@ -58,7 +64,9 @@ const Login = () => {
                   type="email"
                   placeholder="you@example.com"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   required
                 />
               </div>
@@ -69,17 +77,24 @@ const Login = () => {
                   type="password"
                   placeholder="••••••••"
                   value={formData.password}
-                  onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, password: e.target.value })
+                  }
                   required
                 />
               </div>
               <Button type="submit" className="w-full" disabled={loading}>
-                {loading ? 'Signing in...' : 'Sign In'}
+                {loading ? "Signing in..." : "Sign In"}
               </Button>
             </form>
             <div className="mt-6 text-center text-sm">
-              <span className="text-muted-foreground">Don't have an account? </span>
-              <Link to="/register" className="text-primary hover:underline font-medium">
+              <span className="text-muted-foreground">
+                Don't have an account?{" "}
+              </span>
+              <Link
+                to="/register"
+                className="text-primary hover:underline font-medium"
+              >
                 Sign up
               </Link>
             </div>
